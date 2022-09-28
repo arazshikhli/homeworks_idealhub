@@ -11,7 +11,7 @@ function getSumm(){
            }
            else{
           
-            document.querySelector('.result').innerHTML="Ответ: "+result+". "
+            document.querySelector('.result').innerHTML=" Результат сложения двух чисел: "+result+". "
            }
     })
 
@@ -70,12 +70,18 @@ thirdButton.addEventListener("click",function(event){
 })
 
 
+
+const fullNameButton=document.querySelector('.fname_btn');
+fullNameButton.addEventListener("click",function(event){
+    const firstName=document.querySelector('.firstname-input').value;
+const lastName=document.querySelector('.lastname-input').value;
 let User={
-    firstName:"Johny",
-    lastName:"Sins",
+    firstName:firstName,
+    lastName:lastName,
     getFullName:function(){
-        console.log(this.firstName+" "+this.lastName);
+     document.querySelector('.full_name').innerHTML=this.firstName+" "+this.lastName;
+  
     }
 }
-
-User.getFullName();
+    User.getFullName();
+});
